@@ -1,4 +1,4 @@
-package damnjan.petclinic.model;
+package damnjan.model;
 
 import java.time.LocalDate;
 
