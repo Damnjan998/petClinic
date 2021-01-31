@@ -4,8 +4,6 @@ import damnjan.model.Owner;
 import damnjan.model.Vet;
 import damnjan.services.OwnerService;
 import damnjan.services.VetService;
-import damnjan.services.map.OwnerServiceMap;
-import damnjan.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -15,9 +13,9 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

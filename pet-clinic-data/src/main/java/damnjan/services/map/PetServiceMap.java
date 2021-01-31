@@ -2,9 +2,11 @@ package damnjan.services.map;
 
 import damnjan.model.Pet;
 import damnjan.services.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
