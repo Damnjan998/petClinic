@@ -1,11 +1,11 @@
 package damnjan.services.map;
 
 import damnjan.model.Vet;
-import damnjan.services.CrudService;
+import damnjan.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements CrudService<Vet, Long> {
+public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();
