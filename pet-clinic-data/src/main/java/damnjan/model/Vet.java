@@ -22,4 +22,10 @@ public class Vet extends Person {
             inverseJoinColumns = @JoinColumn(name = "specialty_id")
     )
     private Set<Speciality> specialities = new HashSet<>();
+
+    @Builder
+    public Vet(Long id, String firstName, String lastName, Set<Speciality> specialities) {
+        super(id, firstName, lastName);
+        this.specialities = specialities;
+    }
 }
